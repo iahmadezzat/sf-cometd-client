@@ -12,7 +12,9 @@ This module provides a **CometD-based replacement** for EMP API that works relia
 ## Why This Exists (Pain Point)
 The following EMP API import does not work reliably in Experience Cloud:
 
+```js
     import { subscribe } from 'lightning/empApi';
+```
 
 As a result:
 - Platform Events cannot be consumed in LWCs
@@ -25,6 +27,7 @@ As a result:
 
 Use this when you just want to subscribe to a Platform Event from an LWC in Experience Cloud.
 
+```js
     import { LightningElement } from 'lwc';
     import { initCometd } from 'c/cometD';
 
@@ -54,6 +57,7 @@ Use this when you just want to subscribe to a Platform Event from an LWC in Expe
             if (this.client?.disconnect) this.client.disconnect();
         }
     }
+```
 
 ---
 
@@ -149,6 +153,7 @@ Provides the **running authenticated user context** required to authorize CometD
 
 ## LWC Usage Example
 
+```js
     import { LightningElement } from 'lwc';
     import { initCometd } from 'c/cometD';
 
@@ -189,6 +194,7 @@ Provides the **running authenticated user context** required to authorize CometD
             if (this.cometdClient?.disconnect) this.cometdClient.disconnect();
         }
     }
+```
 
 ---
 
